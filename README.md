@@ -43,3 +43,12 @@ The test is targeted at the _./test/setup/**_ folder
 ##### Test written  :bulb:
 
 **Login**  :key:
+
+## Links :link:
+
+* Visit us at <a href="https://microapi.dev/" target="_blank">Microapi</a>
+* <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/" target="_blank">How to write an Nginx config file</a>
+
+
+### Contributors :book:
+* **thebolarin** :nerd_face:
