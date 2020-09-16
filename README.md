@@ -30,7 +30,7 @@ Listening on port 3000
 point your browser to ```localhost:3000```
 
 ## API :cloud_with_lightning: 
-Two API's were consumed for the development of this project
+Various API's were tested for the development of this project
 * Login API
 * Registration API  
 * Current user 
