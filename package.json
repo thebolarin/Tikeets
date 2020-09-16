@@ -1,0 +1,52 @@
+{
+  "name": "tikeets",
+  "version": "1.0.0",
+  "description": "An event booking and reservation platform that deals with the sales of tickets for an event",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest --watchAll --no-cache",
+    "test:ci": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./test/setup.js"
+    ]
+  },
+  "author": "thebolarin",
+  "license": "ISC",
+  "dependencies": {
+    "@bolarin/common": "^1.0.25",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "crypto": "^1.0.1",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-validator": "^6.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.5",
+    "mongoose-update-if-current": "^1.4.0",
+    "nodemailer": "^6.4.10",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
+    "prettier": "^2.0.5",
+    "jest": "^25.2.7",
+    "mongodb-memory-server": "^6.5.1",
+    "supertest": "^4.0.2"
+  }
+}
