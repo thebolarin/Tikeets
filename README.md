@@ -33,6 +33,16 @@ point your browser to ```localhost:3000```
 Two API's were consumed for the development of this project
 * Login API
 * Registration API  
+* Current user 
+* Logout
+* Admin route to create a new event API  
+* Get all upcoming event API 
+* Buy/reserve a ticket for an event API 
+* Cancel ticket reservation API 
+* Admin route to update an event API 
+* Admin route to delete an event API
+* Get all user’s reserved tickets for events API 
+* Admin route to get all user’s reserved tickets API 
 
 To see the test written for these api, run this command in your command line
 ```shell script
@@ -42,12 +52,13 @@ The test is targeted at the _./test/setup/**_ folder
 
 ##### Test written  :bulb:
 
-**Login**  :key:
+**Auth**  
+**Event** 
+**Ticket** 
 
 ## Links :link:
 
-* Visit us at <a href="https://microapi.dev/" target="_blank">Microapi</a>
-* <a href="https://www.nginx.com/resources/wiki/start/topics/examples/full/" target="_blank">How to write an Nginx config file</a>
+* Visit us at <a href="https://tikeet.herokuapp.com/" target="_blank">Tikeets</a>
 
 
 ### Contributors :book:
