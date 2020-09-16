@@ -3,10 +3,7 @@ const jwt = require('jsonwebtoken');
 const { BadRequestError } = require('@bolarin/common');
 const { compare } = require('../../utils/passwordManager');
 const User = require('../../models/user');
-const redis = require('../dao/impl/redis/redis-client');
-const redisKeys = require('../dao/impl/redis/redis-key-gen');
 
-const client = redis.getClient();
 
 exports.signUp = async (req, res) => {
   const { name, email, password } = req.body;
