@@ -3,7 +3,7 @@ const Ticket = require('../../models/ticket');
 const User = require('../../models/user');
 const Event = require('../../models/event');
 const sendEmail = require('../../utils/send-email');
-
+const { message } = require('../../utils/email-template');
 
 
 exports.getTicket = async (req, res) => {
@@ -32,7 +32,7 @@ exports.createTicket = async (req, res) => {
     }
 
     const user = await User.findById(req.currentUser.id);
-    // Build the order and save it to the database
+    // Build the ticket and save it to the database
     const ticket = new Ticket({
         userId: req.currentUser.id,
         status: OrderStatus.Created,
@@ -40,11 +40,12 @@ exports.createTicket = async (req, res) => {
     });
     await ticket.save();
 
-    const message = `Hi, ${user.name}. You have successfully reserved a  ticket for ${event.title} which is scheduled for ${event.date} by exactly ${event.time}`;
+//    send an email that contains the user ticket and event details
+
     sendEmail({
         email: req.currentUser.email,
         subject: 'Ticket Reservation',
-        message,
+        message:message(user,event)
     });
 
     res.status(201).send(ticket);
