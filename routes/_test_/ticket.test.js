@@ -48,7 +48,7 @@ it('returns an error if invalid details is provided', async () => {
     .expect(201);
 
     await request(app)
-        .post('/tickets')
+        .post('/events/tickets')
         .set('Cookie', userCookie)
         .send({ eventId: event.id })
         .expect(404);

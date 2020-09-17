@@ -14,7 +14,7 @@ router.get('/user/tickets',currentUser,requireAuth, getTicket);
 
 router.get('/:userId/tickets',currentUser,requireAuth,authorizeAdmin, getUserTicket);
 
-router.post('/tickets',currentUser,
+router.post('/events/tickets',currentUser,
     requireAuth,
     [
         body('eventId')
@@ -30,7 +30,7 @@ router.post('/tickets',currentUser,
 
 
 
-router.patch('/ticket/:ticketId',currentUser,
+router.patch('/events/ticket/:ticketId',currentUser,
 requireAuth,  cancelTicket);
 
 
