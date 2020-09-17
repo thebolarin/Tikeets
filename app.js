@@ -46,9 +46,9 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('', authRoutes);
-app.use('', eventRoutes);
-app.use('', ticketRoutes);
+app.use(authRoutes);
+app.use(eventRoutes);
+app.use(ticketRoutes);
 
 app.all('*', async (req, res) => {
   throw new NotFoundError();

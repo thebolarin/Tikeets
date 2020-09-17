@@ -24,7 +24,7 @@ exports.getUserTicket = async (req, res) => {
 }
 
 // @desc    Buy/reserve a ticket for an event
-// @route   POST /events/tickets
+// @route   POST /event/tickets
 exports.createTicket = async (req, res) => {
 
     const { eventId } = req.body;
