@@ -67,6 +67,9 @@ was developed and deployed by Odutusin Moses Bolarinwa and was written with Type
 
 * Visit us at <a href="https://tikeet.herokuapp.com/" target="_blank">Tikeets</a>
 
+### Admin details:
+* email - odutusinmoses@gmail
+* password -bolarin
 
 ### Contributors :book:
 * **thebolarin** :nerd_face:
