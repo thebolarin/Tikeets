@@ -37,7 +37,7 @@ Various API's were tested for the development of this project
 * Logout - POST /logout
 * Admin route to create a new event API : POST /events 
 * Get all upcoming event API : GET /events
-* Buy/reserve a ticket for an event API  : POST /events/tickets
+* Buy/reserve a ticket for an event API  : POST /event/tickets
 * Cancel ticket reservation API : PATCH /events/ticket/:ticketId
 * Admin route to update an event API : PATCH /events/:eventId
 * Admin route to delete an event API : POST /events/:eventId
