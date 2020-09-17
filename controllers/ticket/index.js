@@ -35,7 +35,6 @@ exports.createTicket = async (req, res) => {
         throw new NotFoundError();
         
     }
-
     const user = await User.findById(req.currentUser.id);
     // Build the ticket and save it to the database
     const ticket = new Ticket({
