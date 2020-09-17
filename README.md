@@ -65,7 +65,7 @@ was developed and deployed by Odutusin Moses Bolarinwa and was written with Type
 
 ## Links :link:
 
-* Visit us at <a href="https://tikeet.herokuapp.com/" target="_blank">Tikeets</a>
+* Visit us at <a href="https://tikeett.herokuapp.com/" target="_blank">Tikeets</a>
 
 ### Admin details:
 * email - odutusinmoses@gmail
