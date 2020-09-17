@@ -5,7 +5,8 @@ const Event = require('../../models/event');
 const sendEmail = require('../../utils/send-email');
 const { message } = require('../../utils/email-template');
 
-
+// @desc    Get all user’s reserved tickets for events
+// @route   POST /user/tickets
 exports.getTicket = async (req, res) => {
     const tickets = await Ticket.find({
         userId: req.currentUser.id,
@@ -13,13 +14,17 @@ exports.getTicket = async (req, res) => {
 
     res.send(tickets);
 }
-
+	
+// @desc    Admin route to get all user’s reserved tickets
+// @route   POST /:userId/tickets
 exports.getUserTicket = async (req, res) => {
     const ticket = await Ticket.find({ userId: req.params.userId, }).populate('event');
 
     res.send(ticket);
 }
 
+// @desc    Buy/reserve a ticket for an event
+// @route   POST /events/tickets
 exports.createTicket = async (req, res) => {
 
     const { eventId } = req.body;
@@ -50,6 +55,9 @@ exports.createTicket = async (req, res) => {
 
     res.status(201).send(ticket);
 }
+
+// @desc    Cancel ticket reservation
+// @route   PATCH /events/ticket/:ticketId
 exports.cancelTicket = async (req, res) => {
     const { ticketId } = req.params;
 

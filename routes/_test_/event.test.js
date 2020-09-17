@@ -118,7 +118,7 @@ it('returns a 404 if the provided id does not exist', async () => {
 it('returns a 401 if the user authenticated but the event does not exist', async () => {
   const eventId = new mongoose.Types.ObjectId().toHexString();
   await request(app)
-    .put(`/events/${eventId}`)
+    .patch(`/events/${eventId}`)
     .set('Cookie', userCookie)
     .send({
       title: 'aslkdfj',

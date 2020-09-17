@@ -8,6 +8,8 @@ const User = require('../../models/user');
 
 // const client = redis.getClient();
 
+// @desc    User registration
+// @route   POST /signup
 
 exports.signUp = async (req, res) => {
   const { name, email, password } = req.body;
@@ -39,6 +41,9 @@ exports.signUp = async (req, res) => {
   res.status(201).send(user);
 };
 
+
+// @desc    User login
+// @route   POST /login
 exports.signIn = async(req,res) => {
 
     const { email, password } = req.body;
@@ -74,6 +79,9 @@ exports.signIn = async(req,res) => {
     res.status(200).send(existingUser);
 };
 
+
+// @desc    User logout
+// @route   POST /logout
 exports.signOut = (req, res) => {
   req.session = null;
 
