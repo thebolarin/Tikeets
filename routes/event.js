@@ -28,8 +28,8 @@ router.post('/events',currentUser,
     validateRequest, createEvent);
 
     
-router.put('/events/:eventId',currentUser,authorizeAdmin,
-    requireAuth,
+router.put('/events/:eventId',currentUser,
+    requireAuth,authorizeAdmin,
     [
         body('title').not().isEmpty().withMessage('Title is required'),
         body('location').not().isEmpty().withMessage('Event venue is required'),
