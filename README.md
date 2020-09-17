@@ -31,18 +31,18 @@ point your browser to ```localhost:3000```
 
 ## API :cloud_with_lightning: 
 Various API's were tested for the development of this project
-* Login API
-* Registration API  
-* Current user 
-* Logout
-* Admin route to create a new event API  
-* Get all upcoming event API 
-* Buy/reserve a ticket for an event API 
-* Cancel ticket reservation API 
-* Admin route to update an event API 
-* Admin route to delete an event API
-* Get all user’s reserved tickets for events API 
-* Admin route to get all user’s reserved tickets API 
+* Login API - POST /signup
+* Registration API  -POST  /login
+* Current user - GET /currentuser
+* Logout - POST /logout
+* Admin route to create a new event API : POST /events 
+* Get all upcoming event API : GET /events
+* Buy/reserve a ticket for an event API  : POST /events/tickets
+* Cancel ticket reservation API : PATCH /events/ticket/:ticketId
+* Admin route to update an event API : PATCH /events/:eventId
+* Admin route to delete an event API : POST /events/:eventId
+* Get all user’s reserved tickets for events API : GET /user/tickets
+* Admin route to get all user’s reserved tickets API : GET /:userId/tickets
 
 To see the test written for these api, run this command in your command line
 ```shell script

@@ -36,25 +36,7 @@ afterAll(async () => {
   await mongoose.connection.close();
 });
 
-// signin = async () => {
-//   const name = "tester";
-//   const email = 'test@test.com';
-//   const password = 'password';
 
-//   const response = await request(app)
-//     .post('/signup')
-//     .send({
-//       name,
-//       email,
-//       password
-//     })
-//     .expect(201);
-
-//   const cookie = response.get('Set-Cookie');
-
-//   return cookie;
-// };
-// global.signin = jest.fn(() => signin);
 
 
 global.signin = () => {
@@ -79,5 +61,3 @@ global.signin = () => {
   // return a string thats the cookie with the encoded data
   return [`express:sess=${base64}`];
 };
-
-global.signin = jest.fn(() => signin);
