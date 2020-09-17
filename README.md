@@ -50,11 +50,18 @@ npm test
 ```
 The test is targeted at the _./test/setup/**_ folder
 
+The library 
+
+```shell script
+ @bolarin/common
+```
+was developed and deployed by Odutusin Moses Bolarinwa and was written with Typescript
+
 ##### Test written  :bulb:
 
-**Auth**  
-**Event** 
-**Ticket** 
+* Auth  
+* Event
+* Ticket
 
 ## Links :link:
 

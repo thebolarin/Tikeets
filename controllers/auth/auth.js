@@ -3,6 +3,10 @@ const jwt = require('jsonwebtoken');
 const { BadRequestError } = require('@bolarin/common');
 const { compare } = require('../../utils/passwordManager');
 const User = require('../../models/user');
+const redis = require('../dao/impl/redis/redis-client');
+const redisKeys = require('../dao/impl/redis/redis-key-gen');
+
+const client = redis.getClient();
 
 
 exports.signUp = async (req, res) => {
@@ -22,6 +26,7 @@ exports.signUp = async (req, res) => {
     {
       id: user.id,
       email: user.email,
+      role:user.role
     },
     process.env.JWT_KEY
   );
@@ -56,6 +61,7 @@ exports.signIn = async(req,res) => {
       {
         id: existingUser.id,
         email: existingUser.email,
+        role:existingUser.role
       },
       process.env.JWT_KEY
     );

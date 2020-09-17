@@ -31,10 +31,6 @@ exports.updateEvent = async (req, res) => {
     throw new BadRequestError('Cannot edit a reserved ticket');
   }
 
-  // if (event.userId !== req.currentUser!.id) {
-  //   throw new NotAuthorizedError();
-  // }
-
   event.set({
     title: req.body.title,
     location: req.body.location,

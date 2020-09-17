@@ -1,7 +1,8 @@
+const express = require('express');
 const { body } = require('express-validator');
 const { requireAuth, validateRequest , currentUser } = require('@bolarin/common');
+const { authorizeAdmin } = require('../middleware/role');
 
-const express = require('express');
 
 const {
     createEvent, updateEvent, deleteEvent, getEvents
@@ -14,7 +15,7 @@ router.get('/events',getEvents);
 
 
 router.post('/events',currentUser,
-   requireAuth,
+   requireAuth,authorizeAdmin,
     [
         body('title').not().isEmpty().withMessage('Title is required'),
         body('location').not().isEmpty().withMessage('Event venue is required'),
@@ -27,7 +28,7 @@ router.post('/events',currentUser,
     validateRequest, createEvent);
 
     
-router.put('/events/:eventId',currentUser,
+router.put('/events/:eventId',currentUser,authorizeAdmin,
     requireAuth,
     [
         body('title').not().isEmpty().withMessage('Title is required'),
@@ -40,7 +41,7 @@ router.put('/events/:eventId',currentUser,
     ],
     validateRequest, updateEvent);
 
-router.post('/events/:eventId', requireAuth,currentUser, deleteEvent);
+router.post('/events/:eventId', requireAuth,currentUser,authorizeAdmin, deleteEvent);
 
 
 
