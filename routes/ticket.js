@@ -15,7 +15,7 @@ router.get('/user/tickets',currentUser,requireAuth, getTicket);
 router.get('/:userId/tickets',currentUser,requireAuth,authorizeAdmin, getUserTicket);
 
 router.post('/events/tickets',currentUser,
-    requireAuth,
+    requireAuth,authorizeAdmin,
     [
         body('eventId')
             .not()
